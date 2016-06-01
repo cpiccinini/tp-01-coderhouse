@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Maquetación Básica</title>
+</head>
+<body>
+	<header>
+		<figure>
+			<img src="" alt="">
+			<figcaption></figcaption>
+		</figure>
+​
+		<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contact.html" target="_self">Contact</a></li> 
+			<li><a href="http://coderhouse.io" target="_new">Coderhouse</a></li> 
+			<!-- El target define donde se abre el enlace, self define que se abre en la misma pestania, si le ponemos _blank (o NEW) eso lo abre en otra pestania nueva. El self hace parte de un mismo sitio, es un ENLACE LOCAL O RELATIVO, un ENLACE QUE ME LLEVA A UNA SECCION O ARCHIVO DE MI PROPIA PAGINA....Usamos BLANK cuando quiero que ese enlace se ejecute en otra pestania o sitio, es un ENLACE EXTERNO. En el caso de que sea el mismo sitio puede no ponerse el atributo TARGET-->
+			<li><a href=#productos>Productos</a></li>
+			<!-- Este ultimo tipo es un link ANCLA, se usa para navegar dentro de una misma pagina, como se hace en una pagina de Wikipedia por ejemplo -->
+		</ul>
+			
+		</nav>
+	</header>
+​
+	<!-- banner -->
+	<div>
+		<h2>Regular Updates</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus at exercitationem pariatur labore, veniam, consectetur odit ipsam aut, inventore natus architecto soluta quis delectus unde distinctio eum.<br><br> Temporibus, voluptates, deleniti.</p>	
+		<div>
+			<form action="">
+				<input type="email" placeholder="Enter your domain name and hit enter">
+				<!-- Distintos tipos de inputs: text, email, url, tel (estos 3 ultimos habilitan validacion, determinan que tipo de caracteres, formato, se puede usar) -->
+				<!-- Hay otros tipos de input, tipo radio y tipo checkbox, habilitan opciones de seleccion. El input de tipo radio deja elegir una sola opcion, el checkbox permite elegir varios -->
+				<!-- Otro modelo es el input tipo PASSWORD -->
+				<!-- PLACEHOLDER: es un texto Fantasma que se usa para que el usuario sepa el formato de lo que debe completar -->
+			<!-- 	<select name="" id="">
+					<option value="Buenos Aires">Buenos Aires</option>
+					<option value="Capital Federal">Capital Federal</option>
+					<option value="Otro">Otro</option>
+				</select> -->
+				<button type="submit">Enviar</button>
+			</form> 
+			<!-- PhP ASP .NET son lenguajes que hablan con un servidor -->
+		</div>
+
+		<!-- el br es una etiqueta tipo empty, no se cierra, es como el caso del img -->
+	</div>
+​
+​
+	<section id="productos">
+		<article>
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h4>speed servers</h4>
+			<p>Lorem <strong>ipsum dolor sit amet</strong>, consectetur adipisicing elit. Pariatur ullam beatae totam, quas exercitationem consequuntur assumenda corporis omnis maiores harum cum distinctio officiis explicabo mollitia quisquam. Debitis architecto ab, numquam.</p>
+			<p></p>
+		</article>
+​
+		<article>
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h4>hostro services</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima iste, <em>incidunt corporis unde, tenetur veritatis et!</em> Voluptatum inventore dicta molestias dolores quo, cupiditate ab quis, numquam necessitatibus odit, alias maiores!</p>
+		</article>
+​
+		<article>
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h4>live support</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam libero <b>similique debitis, impedit natus </b>fuga animi perferendis amet, mollitia a qui consequatur repudiandae molestias expedita, assumenda ea reprehenderit architecto recusandae?</p>
+		</article>
+​
+		<article>
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h4>get domain name</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione alias <i>illo asperiores vel inventore placeat </i>quasi, in rerum iste temporibus magni voluptates magnam ab eligendi excepturi id tenetur fuga provident!</p>
+		</article>
+	</section>	
+​
+</body>
+</html>
