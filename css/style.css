@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+
+/*selector universal, es aquel que aplica a todo el HTML, se aplica con asterisco*/
+*{
+	box-sizing: border-box;
+	/*descuenta del width o del height, lo sumado en padding y border*/
+}
+
+
+
+body{
+	font-family: 'Raleway', sans-serif;
+	margin:0;
+	/*Si tenemos un valor, ese aplica a todos*/
+	/*si tenemos dos valores el primero se aplica para top y bottom, y el otro para L-R*/
+	/*Si tenemos tres valores, primero es top, segundo es izquierda y derecha, ultimo bottom*/
+	/*margin-top: ;
+	margin-right: ;
+	margin-bottom: ;
+	margin-left: ;*/
+	/*Un conjunto de atributo y valor se llama DECLARACION*/
+}
+
+/*Reset, son resets que se aplican para borrar estilos, como los que por ejemplo puede traer el navegador por default*/
+
+/*agrupacion de selectores*/
+
+ul,ol{
+	list-style: none;    /*elimina la vigneta*/
+	margin: 0;
+	/*margin auto centra cajas y las centra HORIZONTALMENTE - el MARGIN ES LA DISTANCIA HACIA ELEMENTOS EXTERNOS*/
+	padding: 0;
+	/*El padding es la "amplitud" interna del elemento, el "relleno"*/
+	/*hay padding-top, padding-bottom, right y left, se aplica el mismo concepto de SHORT HAND que en el margin*/
+}
+figure{
+	margin:0;
+}
+
+/*tamagnos, se definen por width y height*/
+/*modelo de caja - box model*
+	-width
+	-height
+	-padding
+	-border
+		border-style [solid |dashed| dotted | doubled]
+		border-width 
+		border-color
+	-margin*/
+/*el padding y el width o height se suman a la hora de dimensionar el total del espacio*/
+.logo{
+	float: left;
+	
+}
+
+.main-header{
+	width: 1200px;
+	padding:20px 0;
+	margin: auto;
+}
+
+.main-nav{
+	float:right;
+	/*el float none hace que el elemento "no flote", el float left y el right generan que la altura del elemento contenedor no quede acotada. La flotacion los coloca en una capa superior a los elementos*/
+}
+
+.cleaner{
+	clear: both;
+	/*el cleaner es una linea que se coloca para que el header genere una altura mas alla de que los elementos de la capa sean flotantes y no esten en el mismo nivel que el contenedor/
+}
+
+/*si aplico float sobre un elemento que ya tiene float, no hace falta el cleaner*/
+}
+
+.main-nav li{
+	float: left;
+	margin: 8px 0 0 15px;
+}
+
+#banner{
+	background: url(../images/indexbanner-bg3.jpg) center top no-repeat;
+	background-size: cover; 
+
+}
+
+.container{
+	width:1200px;
+	margin: auto;
+	
+}
+
+.banner-title{
+	font-size: 50px;
+	color: #fff;
+	padding-top: 20px;
+	margin:0;
+}
+
+.banner-text{
+	font-size:18px;
+	color: #fff;
+}
+
+.register{
+	background-color: #06B4F2;
+	position: relative;
+	top: 30px;
+}
+
+.register input {
+	width: 1000px;
+	height: 60px;
+	font-size: 16px;
+	font-family: inherit;
+}
+
+.register button{
+	width:195px;
+	height: 60px;
+	border:none;
+	background-color: #06B4F2;
+	color:#fff;
+	font-family: inherit;
+	font-size: 16px;
+
+}
+
+.producto{
+	border:dashed 1px green;
+	float: left;
+	margin-top: 70px;
+	width: 300px;
+	text-align: center;
+}
