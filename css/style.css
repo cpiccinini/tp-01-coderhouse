@@ -1,104 +1,134 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
 
-
-/*selector universal, es aquel que aplica a todo el HTML, se aplica con asterisco*/
+/* selector universal */
 *{
 	box-sizing: border-box;
-	/*descuenta del width o del height, lo sumado en padding y border*/
+	/* descuenta del width y height, lo sumado en padding y border */
 }
-
-
 
 body{
 	font-family: 'Raleway', sans-serif;
-	margin:0;
-	/*Si tenemos un valor, ese aplica a todos*/
-	/*si tenemos dos valores el primero se aplica para top y bottom, y el otro para L-R*/
-	/*Si tenemos tres valores, primero es top, segundo es izquierda y derecha, ultimo bottom*/
-	/*margin-top: ;
-	margin-right: ;
-	margin-bottom: ;
-	margin-left: ;*/
-	/*Un conjunto de atributo y valor se llama DECLARACION*/
-}
-
-/*Reset, son resets que se aplican para borrar estilos, como los que por ejemplo puede traer el navegador por default*/
-
-/*agrupacion de selectores*/
-
-ul,ol{
-	list-style: none;    /*elimina la vigneta*/
 	margin: 0;
-	/*margin auto centra cajas y las centra HORIZONTALMENTE - el MARGIN ES LA DISTANCIA HACIA ELEMENTOS EXTERNOS*/
-	padding: 0;
-	/*El padding es la "amplitud" interna del elemento, el "relleno"*/
-	/*hay padding-top, padding-bottom, right y left, se aplica el mismo concepto de SHORT HAND que en el margin*/
-}
-figure{
-	margin:0;
+	/*
+		margin-top: ;
+		margin-right: ;
+		margin-bottom: ;
+		margin-left: ;
+	*/
 }
 
-/*tamagnos, se definen por width y height*/
-/*modelo de caja - box model*
-	-width
-	-height
-	-padding
-	-border
-		border-style [solid |dashed| dotted | doubled]
-		border-width 
-		border-color
-	-margin*/
-/*el padding y el width o height se suman a la hora de dimensionar el total del espacio*/
-.logo{
-	float: left;
-	
+img {
+	max-width: 100%;
 }
+
+/* Resets */
+
+/* agrupación de selectores */
+ul, ol{
+	list-style: none; /* elimina la viñeta */
+	margin: 0;
+	padding: 0;
+	/*
+		padding-top: ;
+		padding-right: ;
+		padding-bottom: ;
+		padding-left: ;
+	*/
+}
+
+figure{
+	margin: 0;
+}
+
+/*
+	tamaños
+		ancho - width:;
+		alto - height:;
+	modelo de caja - box model
+		- width
+		- height
+		- padding
+		- border
+			border-style [solid | dashed | dotted | double]
+			border-width
+			border-color
+			border: ;
+		- margin
+*/
 
 .main-header{
-	width: 1200px;
-	padding:20px 0;
+	max-width: 1200px;
 	margin: auto;
+	padding: 20px 0;
+}
+
+.logo{
+	float: left;
+}
+
+.logo figcaption{
+	display: none;
 }
 
 .main-nav{
-	float:right;
-	/*el float none hace que el elemento "no flote", el float left y el right generan que la altura del elemento contenedor no quede acotada. La flotacion los coloca en una capa superior a los elementos*/
+	float: right;
 }
+
+/* selector descendiente */
+.main-nav li{
+	float: left;
+	margin: 5px 0 0 15px;
+}
+
+.main-nav a{
+	text-decoration: none;
+	color: #222;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+
+.main-nav a:link {
+    color: grey;
+}
+
+.main-nav a:visited {
+   color: none;
+}
+
+.main-nav a:hover {
+   color: grey;
+}
+
+.main-nav a:active {
+	color: black;
+}
+
+
 
 .cleaner{
 	clear: both;
-	/*el cleaner es una linea que se coloca para que el header genere una altura mas alla de que los elementos de la capa sean flotantes y no esten en el mismo nivel que el contenedor/
-}
-
-/*si aplico float sobre un elemento que ya tiene float, no hace falta el cleaner*/
-}
-
-.main-nav li{
-	float: left;
-	margin: 8px 0 0 15px;
 }
 
 #banner{
 	background: url(../images/indexbanner-bg3.jpg) center top no-repeat;
-	background-size: cover; 
-
+	background-size: cover;
 }
 
 .container{
-	width:1200px;
+	max-width: 1200px;
 	margin: auto;
-	
 }
 
 .banner-title{
 	font-size: 50px;
 	color: #fff;
-	padding-top: 20px;
-	margin:0;
+	padding-top: 150px;
+	margin: 0;
 }
 
 .banner-text{
-	font-size:18px;
+	font-size: 20px;
 	color: #fff;
 }
 
@@ -108,28 +138,617 @@ figure{
 	top: 30px;
 }
 
-.register input {
-	width: 1000px;
+.register input{
+	width: 83%;
 	height: 60px;
 	font-size: 16px;
+	padding: 0 15px;
 	font-family: inherit;
 }
 
 .register button{
-	width:195px;
-	height: 60px;
-	border:none;
+	border: none;
 	background-color: #06B4F2;
-	color:#fff;
+	width: 16%;
+	height: 60px;
+	color: #fff;
 	font-family: inherit;
 	font-size: 16px;
-
 }
 
 .producto{
-	border:dashed 1px green;
+	width: 25%;
+	text-align: center;
 	float: left;
-	margin-top: 70px;
-	width: 300px;
+	margin-top: 8%;
+	padding: 0 15px;
+}
+
+.producto h4{
+	text-transform: uppercase;
+}
+
+.title-services{
+	text-align: center;
+	margin-top: 100px;
+	font-size: 25px;
+	margin-bottom: 0;
+}
+
+.title-services h4+p{
 	text-align: center;
 }
+
+.title-services  p{
+	margin: 0 0 100px;
+	font-size: 16px;
+}
+
+.right-services h3{
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.left-services h3{
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+
+.left-services{
+	width: 33.3%;
+	float: left;
+}
+
+.left-services li{
+	position: relative;
+	text-align: right;
+	padding-right: 60px;
+	margin-bottom: 10px;
+}
+
+.left-services img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.right-services li{
+	position: relative;
+	padding-left: 60px;
+}
+.right-services img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.cellphone{
+	width: 33.3%;
+	text-align: center;
+	float: left;
+	padding: 0 15px;
+}
+
+.right-services{
+	width: 33.3%;
+	float: left;
+}
+
+.pricing-table{
+	background: url(../images/pricing-bg.jpg) center top no-repeat;
+	background-size: contain;
+	margin-top: -100px;
+}
+
+.pricing-table h3{
+	text-align: center;
+	margin: 0;
+	padding: 50px 0 0;
+	font-size: 40px;
+}
+
+.pricing-table h3 + p{
+	text-align: center;
+}
+
+.price-table{
+	background-color: #fff;
+	box-shadow:
+		0 0 10px rgba(0,0,0,0.5)
+		/*-5px -5px 10px rgba(0,0,0,0.5) inset,
+		-5px -5px 10px red,
+		-10px -10px 10px green,
+		-15px -15px 10px orange*/
+		;
+	width: 22.5%;
+	padding: 30px;
+	float: left;
+	margin-top: 60px;
+	margin-right: 3.3%;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.price-table h4{
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.price-table h2{
+	font-size: 50px;
+	margin: 0;
+}
+
+.price-table h2 sup{
+	font-size: 20px;
+	position: relative;
+	top: 5px;
+}
+
+.price-table p{
+	margin: 0 0 30px;
+}
+
+.price-table table{
+	width: 100%;
+}
+
+.price-table td{
+	padding: 5px;
+}
+
+.smpackagecolor{
+	color:	#3399ff;
+}
+
+.norpackagecolor{
+	color:yellow;
+}
+
+.bigpackagecolor{
+	color:#ffbf00;
+}
+
+.bestpackagecolor{
+	color:red;
+}
+
+
+.price-table a{
+	display: block;
+	background-color: #26ABF6;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 10px;
+	text-decoration: none;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.price-table:last-of-type{
+	margin-right: 0;
+}
+
+/*.no-margin{
+	margin: 0;
+}*/
+
+/* pseudo selectores
+	selector:pseudo-selector{
+		mi regla
+	}
+	:last-child
+*/
+
+
+.main-footer{
+	background-color: #233042;
+	margin-top: 80px;
+}
+
+.main-footer h3{
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	margin: 0;
+	padding: 60px 0;
+	font-weight: 400;
+	/*text-shadow:
+		3px 3px 5px black,
+		6px 6px 5px red,
+		9px 9px 5px green,
+		12px 12px 5px violet;*/
+}
+
+.main-footer h3 span{
+	color: #26ABF6;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+.bg-dark{
+	background-color: #151D27;
+	padding: 30px 0;
+}
+
+.copyright{
+	float: left;
+	margin: 10px 0 0;
+	color: #fff;
+	font-weight: 100;
+}
+
+.footer-nav{
+	float: right;
+	margin-top: 10px;
+}
+
+.footer-nav li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.footer-nav a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 100;
+}
+
+/*CSS APLICADO A LA SECCION DE CONTACTO UNICAMENTE*/
+
+*:focus {
+    outline: none;
+}
+
+#bannercontact{
+	background: url(../images/indexbanner-bg2.jpg) center top no-repeat;
+	background-size: cover;
+}	
+
+.bannercontact-title{
+	font-size: 50px;
+	color: #fff;
+	padding-top: 150px;
+	margin-right:5%;
+}
+
+.bannercontact-text{
+	font-size: 20px;
+	color: #fff;
+	padding-bottom:150px;
+}
+
+.informacion1 input{
+	width:90%;
+	height:40px;
+	font-size: 14px;
+	font-family: inherit;
+	margin-bottom: 15px;
+	margin-left: 5%;
+	margin-right: 10%;
+	border:1px solid #d0d0e1;
+	border-radius: 7px;
+}
+
+.message input{
+	width:95%;
+	height:150px;
+	font-size: 14px;
+	font-family: inherit;
+	margin-left:0%;
+	border:1px solid #d0d0e1;
+	border-radius: 7px;
+	padding: 0px 0px 120px 0px;
+	
+}
+
+.leftinput{
+	float:left;
+	width:50%;
+	height:150px;
+	background-color: #fff;
+}
+
+.rightinput{
+	float:right;
+	width:50%;
+	height:150px;
+	background-color: #fff;
+
+}
+
+.buttoncontact{
+	width: 100%;
+}
+
+.buttoncontact button{
+	margin-left: 41%;
+	margin-right:41%;
+	margin-top: 40px;
+	width: 18%;
+	border: 1px solid #d0d0e1;
+	background-color: #06B4F2;
+	border-radius: 7px;
+	height: 60px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 16px;
+}
+
+/*SECCION SMALL MEDIA*/
+
+@media (max-width: 800px){
+
+	body {
+		font-size: smaller;
+	}
+
+	.container,.main-header{
+		width:95%;
+	}
+
+	.logo{
+	float:none;	
+	text-align: center;
+	}
+
+	.main-nav{
+	float:none;
+	}	
+	.main-nav ul li{
+	text-transform: uppercase;
+	display: block;
+	float: none;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 0px;
+	margin-top: 20px;
+
+	}
+
+
+
+	#banner{
+	background: none;
+	background-color: white;
+	}
+
+	.banner-title{
+	font-size: 0px;
+	color: #fff;
+	padding-top: 0px;
+	margin: 0;
+	}
+
+	.banner-text{
+	font-size: 0px;
+	color: #fff;
+	}
+
+	.producto{
+		width: 50%;
+		margin-top: 80px;
+	}
+
+	.title-services{
+	margin-top: 60px;
+	margin-bottom: -60px;
+	}
+
+	.right-services , .left-services, .cellphone{
+		float: none;
+		width: 100%;
+	}
+
+	.right-services h3{
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+
+	.left-services h3{
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+
+	.left-services li{
+	position: relative;
+	padding-left: 60px;
+	text-align: left;
+	}	
+
+	.left-services img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+
+	.pricing-table{
+		margin-top: 0px;
+	}
+	.price-table{
+		width: 48%;
+		margin-right: 4%;
+	}
+	.price-table:nth-of-type(even){
+		margin-right:0;
+	}
+	.price-table h4{
+		font-size:15px;
+
+	}
+	.price-table table{
+		font-size:12px;
+	}
+
+	.main-footer h3{
+	font-size: 25px;
+	}
+
+	.main-footer h3 span{
+	font-size: 35px;
+	}
+
+/*Cambios aplicables solo en la pagina Contact*/
+
+	#bannercontact{
+	background: none;
+	background-color: white;
+	}
+
+	.bannercontact-title{
+	font-size: 0px;
+	color: #fff;
+	padding-top: 0px;
+	margin: 0;
+	}
+
+	.bannercontact-text{
+	font-size: 0px;
+	color: #fff;
+	padding-bottom: 0px;
+	}
+
+	.informacion1 input{
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height:40px;
+	font-size: 14px;
+	font-family: inherit;
+	margin-bottom: 15px; 
+	border:1px solid #d0d0e1;
+	border-radius: 7px;
+	}
+
+	.message input{
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height:150px;
+	font-size: 14px;
+	font-family: inherit;
+	border:1px solid #d0d0e1;
+	border-radius: 7px;
+	padding: 0px 0px 120px 0px;
+	
+	}
+
+	.leftinput{
+	float:left;
+	width:100%;
+	height:150px;
+	background-color: #fff;
+	}
+
+	.rightinput{
+	float:right;
+	width:100%;
+	height:150px;
+	margin-top: 15px;
+	background-color: #fff;
+
+	}
+
+
+}
+
+/*SECCION XSMALL*/
+@media (max-width: 600px){
+		
+	body {
+		font-size: smaller;
+	}
+
+	.container,.main-header{
+		width:95%;
+	}
+
+	.logo{
+	float:none;	
+	text-align: center;
+	}
+
+	.main-nav{
+	float:none;
+	}	
+	.main-nav ul li{
+	text-transform: uppercase;
+	display: block;
+	float: none;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 0px;
+	margin-top: 20px;
+
+	}
+
+
+	#banner{
+	background: none;
+	background-color: white;
+	}
+
+	.banner-title{
+	font-size: 0px;
+	color: #fff;
+	padding-top: 0px;
+	margin: 0;
+	}
+
+	.banner-text{
+	font-size: 0px;
+	color: #fff;
+	}
+
+	.producto{
+		width: 100%;
+		margin-top: 50px;
+	}
+	.right-services , .left-services, .cellphone{
+		float: none;
+		width: 100%;
+	}
+
+	.left-services li{
+	position: relative;
+	padding-left: 60px;
+	text-align: left;
+	}	
+
+	.left-services img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+
+	.pricing-table{
+		margin-top: 0px;
+	}
+	.price-table{
+		width: 48%;
+		margin-right: 4%;
+	}
+	.price-table:nth-of-type(even){
+		margin-right:0;
+	}
+	.price-table h4{
+		font-size:15px;
+
+	}
+	.price-table table{
+		font-size:11px;
+	}
+
+
+	.main-footer h3{
+	font-size: 20px;
+	}
+
+	.main-footer h3 span{
+	font-size: 30px;
+	}
+
+}
+
